@@ -1,0 +1,19 @@
+<div class="container">
+  <form action="">
+    <label for="nombre">Nombre</label>
+    <input type="text" name="nombre" id="nombre" [(ngModel)]="usuarioNuevo.nombre">
+    <label for="apellido">Apellido</label>
+    <input type="text" name="apellido" id="apellido" [(ngModel)]="usuarioNuevo.apellido">
+    <label for="email">Email</label>
+    <input type="text" name="email" id="email" [(ngModel)]="usuarioNuevo.email">
+    <label for="telefono">telefono</label>
+    <input type="text" name="telefono" id="telefono" [(ngModel)]="usuarioNuevo.telefono">
+
+    <button class="btn btn-primary" (click)="guardarUsuario()">Guardar</button>
+    <!--Crea un boton para regresar al inicio-->
+    <button class="btn btn-primary" routerLink="/">Regresar</button>
+  </form>
+  <div *ngIf="mensajeError" class="mensaje-error">
+    {{ mensajeError }}
+  </div>
+</div>
